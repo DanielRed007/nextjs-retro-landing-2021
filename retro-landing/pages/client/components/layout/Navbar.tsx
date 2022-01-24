@@ -8,23 +8,31 @@ export default function Navbar() {
   
     return (
       <Container className={styles.container} fluid>
-        <Menu inverted>
-          <Link passHref href="/">
-            <Menu.Item
-                name='home'
-                active={activeItem === 'home'}
-                onClick={() => setActiveItem('home')}
-            />
-          </Link>
+        <div className={styles.navbarContainer}>
+          <Menu inverted>
+            <Link passHref href="/">
+              <Menu.Item
+                  className={styles.navLink}
+                  name='home'
+                  active={activeItem === 'home'}
+                  onClick={() => setActiveItem('home')}
+              />
+            </Link>
 
-          <Link passHref href="/catalog">
-            <Menu.Item
-                name='catalog'
-                active={activeItem === 'catalog'}
-                onClick={() => setActiveItem('catalog')}
-            />
-          </Link>
-        </Menu>
+            <Link passHref href="/catalog">
+              <Menu.Item
+                  className={styles.navLink}
+                  name='catalog'
+                  active={activeItem === 'catalog'}
+                  onClick={() => setActiveItem('catalog')}
+              />
+            </Link>
+          </Menu>
+
+          <div>
+            <h1 style={{color: "white"}} className={styles.logoTitle}>Horus Games</h1>
+          </div>
+        </div>
       </Container>
     );
 }
