@@ -1,6 +1,6 @@
 .container {
-  padding: 2rem;
   background-color: #1b1c1d;
+  padding: 20px;
 }
 
 .navbarContainer{
@@ -16,6 +16,24 @@
   font-family: 'Press Start 2P';
   font-size: 40px;
   cursor: pointer;
+}
+
+.carousel{
+  margin: 0;
+  padding: 0;
+}
+
+.cardContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  width: 25%;
+  height: 150px;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 0 30px;
 }
 
 @media (max-width: 600px) {

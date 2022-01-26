@@ -1,14 +1,29 @@
 import Image from 'next/image';
-import { Container, Header } from 'semantic-ui-react';
+import { Container, Header, Card, Icon } from 'semantic-ui-react';
 import { Carousel } from 'react-responsive-carousel';
 import styles from "../styles/Home.module.css";
 
+const imageLinks = ["/gow.jpg","/chrono.jpg","/cuphead.jpg"];
+
+const HorusCard = (link:string) => {
+  return (
+    <div>
+        <Image
+          src={link}
+          alt={link.split("/").join()}
+          layout="responsive"
+          width={1366}
+          height={450}
+        />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <div>
       <Container fluid>
-          <Carousel>
+          <Carousel className={styles.carousel}>
             <div>
                 <Image
                   src="/gow.jpg"
@@ -39,6 +54,21 @@ export default function Home() {
             </div>
           </Carousel>
       </Container>
+
+      <div className={styles.cardContainer}>
+          <div className={styles.card}>
+            Hello
+          </div>
+
+          <div className={styles.card}>
+            Hello
+          </div>
+
+          <div className={styles.card}>
+            Hello
+          </div>
+      </div>
+      
     </div>
   )
 }
