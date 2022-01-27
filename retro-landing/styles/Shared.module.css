@@ -1,0 +1,17 @@
+
+.card {
+    width: 25%;
+    height: 170px;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 0 30px;
+}
+  
+.cardTitle {
+    font-family: 'Press Start 2P';
+    font-size: 24px;
+}
+
+.cardText{
+    font-size: 18px;
+}

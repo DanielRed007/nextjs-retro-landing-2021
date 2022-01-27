@@ -26,6 +26,7 @@
 .cardContainer{
   display: flex;
   justify-content: center;
+  height: auto;
 }
 
 .card{
@@ -34,6 +35,11 @@
   border: 1px solid black;
   padding: 30px;
   margin: 0 30px;
+}
+
+.cardTitle{
+  font-family: 'Press Start 2P';
+  font-size: 24px;
 }
 
 @media (max-width: 600px) {
