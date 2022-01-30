@@ -1,6 +1,6 @@
-
 export interface HomeCard {
     title: string;
     text: string;
-    cardChange?(): any;
+    index?: number;
+    setCardIndex?(): void;
 }

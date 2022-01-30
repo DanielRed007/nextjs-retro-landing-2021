@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { Container } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 import { Carousel } from 'react-responsive-carousel';
 import { HorusCarouselImage } from "./shared/components/HorusCarouselImage";
 import { HorusCard } from "./shared/components/HorusCard";
 import { imageLinksMockups } from "./shared/mockups/imageLinks";
-import { cardTexts } from "./shared/mockups/CardTexts";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ cardData }) {
 
   const [ cardIndex, setCardIndex] = useState(0);
   
@@ -18,19 +17,37 @@ export default function Home() {
   return (
     <div>
       <Container fluid>
-          <Carousel className={styles.carousel} selectedItem={0}>
-            { imageLinksMockups.map((image, index) => (
-              <HorusCarouselImage key={index} link={image.link} alt={image.alt}/>
-            ))}
-          </Carousel>
+        <Carousel className={styles.carousel} selectedItem={cardIndex} showThumbs={false}>
+          { imageLinksMockups.map((image, index) => (
+            <HorusCarouselImage key={index} link={image.link} alt={image.alt}/>
+          ))}
+        </Carousel>
       </Container>
 
       <div className={styles.cardContainer}>
-          { cardTexts.map((card,index) => (
-            <HorusCard key={index} title={card.title} text={card.text}/>
-          ))}
+        <Grid columns={3} divided>
+          <Grid.Row>
+            { cardData.cardTexts.map((card,index) => (
+              <Grid.Column key={index}>
+                <HorusCard key={index} title={card.title} text={card.text} setCardIndex={() => handleCarouselSwitch(index)}/>
+              </Grid.Column>
+            ))}
+          </Grid.Row>
+        </Grid>
       </div>
       
     </div>
   )
+}
+
+export async function getStaticProps() {
+
+  const res = await fetch('http://localhost:3000/api/home')
+  const cardData = await res.json();
+
+  return {
+    props: {
+      cardData,
+    },
+  }
 }
