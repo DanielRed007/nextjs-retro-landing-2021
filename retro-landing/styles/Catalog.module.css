@@ -1,0 +1,12 @@
+.catalogContainer{
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 80%;
+  height: auto;
+}
+
+.catalogItem{
+    margin: 20px;
+    background-color: red;
+}

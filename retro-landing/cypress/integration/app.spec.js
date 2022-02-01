@@ -12,6 +12,6 @@ describe('Navigation', () => {
       cy.url().should('include', '/catalog');
   
       // The new page should contain an h1 with "About page"
-      cy.get('h1').contains('This is catalog');
+      cy.get('h1').contains('Catalog');
     })
 });

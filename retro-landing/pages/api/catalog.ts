@@ -11,5 +11,5 @@ const catalogItems: CatalogItems = [
 ]
 
 export default function handler(req, res) {
-    res.status(200).json({ catalog: catalogItems });
+    res.status(200).json({ catalogItems });
 }
