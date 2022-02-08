@@ -1,12 +1,21 @@
 .catalogContainer{
-  background-color: white;
   margin: 0 auto;
   padding-top: 40px;
   width: 80%;
-  height: auto;
+  height: 300px;
 }
 
 .catalogItem{
-    margin: 20px;
-    background-color: red;
+  word-break: break-word;
+  width: 25%;
+  margin: 20px;
+}
+
+.rowContainer{
+  display: flex;
+  justify-content: left;
+}
+
+.cardGrid{
+  overflow-y: scroll;
 }
