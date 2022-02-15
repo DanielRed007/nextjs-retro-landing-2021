@@ -5,5 +5,5 @@ export interface HomeCatalogCard {
     image: string;
     price: string;
     description: string;
-    setCardIndex?(): void;
+    addToCart?(): void;
 }

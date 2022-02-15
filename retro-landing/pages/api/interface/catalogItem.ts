@@ -1,5 +1,6 @@
 
 export interface CatalogItem{
+    id: number;
     title: string;
     developer: string;
     image: string;

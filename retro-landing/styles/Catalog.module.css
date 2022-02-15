@@ -7,8 +7,8 @@
 
 .catalogItem{
   word-break: break-word;
-  width: 25%;
-  margin: 20px;
+  width: auto;
+  margin-top: 30px;
 }
 
 .rowContainer{

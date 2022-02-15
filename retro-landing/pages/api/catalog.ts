@@ -2,12 +2,18 @@
 import { CatalogItems } from "./interface/catalogItem"
 
 const catalogItems: CatalogItems = [
-    { title: "God of War: Ragnarok", developer: "Sony / Santa Monica Studio", image: "", price: "$60 USD", description: "bla bla bla"},
-    { title: "Returnal", developer: "Sony", image: "", price: "$45 USD", description: "bla bla bla"},
-    { title: "Halo Infinite", developer: "Microsoft Studios", image: "", price: "$48 USD", description: "bla bla bla"},
-    { title: "Crash Bandicoot", developer: "Sony", image: "", price: "$55 USD", description: "bla bla bla"},
-    { title: "Metroid Dread", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
-    { title: "Super Metroid", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
+    { id: 1 ,title: "God of War 2", developer: "Sony / Santa Monica Studio", image: "", price: "$60 USD", description: "bla bla bla"},
+    { id: 2 , title: "Returnal", developer: "Sony", image: "", price: "$45 USD", description: "bla bla bla"},
+    { id: 3 , title: "Halo Infinite", developer: "Microsoft Studios", image: "", price: "$48 USD", description: "bla bla bla"},
+    { id: 4 , title: "Crash Racing", developer: "Sony", image: "", price: "$55 USD", description: "bla bla bla"},
+    { id: 5 , title: "Metroid Dread", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
+    { id: 6 , title: "Super Metroid", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
+    { id: 7 , title: "God of War 3", developer: "Sony / Santa Monica Studio", image: "", price: "$60 USD", description: "bla bla bla"},
+    { id: 8 , title: "Returnal 2", developer: "Sony", image: "", price: "$45 USD", description: "bla bla bla"},
+    { id: 9 , title: "Halo 3", developer: "Microsoft Studios", image: "", price: "$48 USD", description: "bla bla bla"},
+    { id: 10 , title: "Crash 2", developer: "Sony", image: "", price: "$55 USD", description: "bla bla bla"},
+    { id: 11 , title: "Metroid Prime", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
+    { id: 12 , title: "Super Metroid", developer: "Nintendo", image: "", price: "$80 USD", description: "bla bla bla"},
 ]
 
 export default function handler(req, res) {
