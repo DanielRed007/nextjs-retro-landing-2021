@@ -1,2 +1,7 @@
 # nextjs-retro-landing-2021
-Landing page using NextJS
+
+Sample Langing page using Next.js
+
+# Technologies used
+
+Typescript, ReactJS, NodeJS, NextJS, Semantic UI
